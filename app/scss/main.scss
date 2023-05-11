@@ -1,0 +1,365 @@
+@import "fonts";
+@import "mixins";
+@import "UI";
+@import "libs/swiper";
+@import "libs/custom-select";
+@import "libs/simplebar";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+button {
+	border: none;
+	cursor: pointer;
+}
+
+img {
+	display: block;
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+::placeholder {
+	color: #777777;
+}
+
+h2 {
+	font-weight: 400;
+	font-size: 28px;
+	line-height: 36px;
+	color: #000000;
+	font-family: Consolas;
+	@include sm {
+		font-size: 23px;
+		line-height: 36px;
+	}
+}
+
+.container {
+	width: 100%;
+	max-width: 778px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.main {
+	padding: 80px 0;
+	@include sm {
+		padding: 40px 0 66px;
+	}
+}
+
+.title {
+	display: flex;
+	align-items: center;
+	margin-bottom: 64px;
+	@include sm {
+		margin-bottom: 40px;
+	}
+
+	&::before, &::after {
+		content: "";
+		background: #DBDBDB;
+		display: inline-block;
+		height: 1px;
+		width: 100%;
+	}
+
+	h1 {
+		font-family: Consolas;
+		white-space: nowrap;
+		font-weight: 700;
+		font-size: 48px;
+		line-height: 48px;
+		text-align: center;
+		color: #0062FF;
+		text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+		margin: 0 28px;
+		@include sm {
+			margin: 0 15px;
+			font-size: 23px;
+			line-height: 25px;
+		}
+	}
+}
+
+.banner {
+	position: relative;
+	padding-bottom: 50px;
+	margin-bottom: 55px;
+	border-bottom: 1px solid #DCDCDC;
+	@include sm {
+		display: flex;
+		flex-direction: column-reverse;
+		padding-bottom: 0;
+		margin-bottom: 34px;
+		border-bottom: none;
+		width: calc(100% + 20px);
+	}
+
+	&__image {
+		margin-bottom: 20px;
+
+		img {
+			@include sm {
+				width: 738px;
+			}
+		}
+
+		@include sm {
+			margin-bottom: 0;
+		}
+	}
+
+	&__description {
+		font-family: 'Arial';
+		font-style: italic;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 18px;
+		color: #202326;
+		@include sm {
+			margin-bottom: 26px;
+		}
+	}
+}
+
+.banner-date {
+	position: absolute;
+	top: 13px;
+	left: 20px;
+	padding: 24px 29px 22px;
+	font-family: 'Merriweather';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 25px;
+	color: #1A1A1A;
+	background: rgba(255, 255, 255, 0.9);
+	text-align: center;
+	@include sm {
+		display: none;
+	}
+
+	&__date {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		margin-bottom: 14px;
+
+		svg {
+			margin-left: 12px;
+		}
+	}
+
+	&__month {
+		font-size: 16px;
+		line-height: 25px;
+	}
+}
+
+.server-js {
+	margin-bottom: 45px;
+	font-style: italic;
+	@include sm {
+		margin-bottom: 56px;
+	}
+
+	&__title {
+		margin-bottom: 30px;
+		@include sm {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__description {
+		font-family: 'Open Sans';
+		font-size: 18px;
+		line-height: 24px;
+		color: #1A1A1A;
+		display: flex;
+		@include sm {
+			font-size: 14px;
+			line-height: 20px;
+		}
+
+		&-wrap > span {
+			color: #777777;
+			display: block;
+			margin-top: 30px;
+		}
+
+		&::before {
+			content: url("../pic/quotation.png");
+			margin-right: 24px;
+			transform: translateY(-9px);
+			@include sm {
+				margin-right: 19px;
+			}
+		}
+	}
+}
+
+.book {
+	background: #EDEDED;
+	padding: 34px 20px 36px;
+	display: flex;
+	justify-content: center;
+	@include sm {
+		padding: 22px 20px 18px;
+	}
+
+	&__wrap img {
+		height: 200px;
+		object-fit: cover;
+	}
+
+	&__link {
+		font-family: 'Helvetica';
+		margin-bottom: 17px;
+		font-size: 14px;
+		line-height: 18px;
+		@include sm {
+			margin-bottom: 16px;
+		}
+	}
+}
+
+.conclusion {
+	padding: 45px 0 74px;
+	@include sm {
+		padding: 25px 0 30px;
+	}
+
+	&__title {
+		margin-bottom: 26px;
+		@include sm {
+			margin-bottom: 21px;
+			font-size: 21px;
+			line-height: 36px;
+		}
+	}
+
+	&__description {
+		font-family: 'Arial';
+		font-size: 16px;
+		line-height: 24px;
+		color: #202326;
+		@include sm {
+			font-size: 14px;
+			line-height: 18px;
+		}
+	}
+}
+
+.form {
+	padding: 40px 0;
+	background: #EDEDED;
+
+	&__title {
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 18px;
+		color: #202326;
+		margin-bottom: 10px;
+		@include sm {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__comment {
+		font-family: Consolas;
+		font-weight: 700;
+		margin-bottom: 15px;
+		font-size: 18px;
+		line-height: 18px;
+		color: #202326;
+		@include sm {
+			font-size: 16px;
+			line-height: 18px;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__info {
+		display: flex;
+		margin-bottom: 20px;
+		@include sm {
+			flex-direction: column;
+			margin-bottom: 10px;
+		}
+
+		.input {
+			margin-right: 30px;
+			@include sm {
+				margin-bottom: 10px;
+				margin-right: 0;
+			}
+		}
+	}
+
+	&__review {
+		width: 100%;
+		margin-bottom: 20px;
+		@include sm {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.posts {
+	padding-top: 60px;
+	@include sm {
+		padding-top: 36px;
+	}
+
+	&__title {
+		margin-bottom: 40px;
+	}
+}
+
+.posts-list-pagination {
+	position: static;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 23px;
+
+	.swiper-pagination-bullet {
+		width: 10px;
+		height: 10px;
+	}
+
+	.swiper-pagination-bullet-active {
+		width: 15px;
+		height: 15px;
+		background: #0062FF;
+	}
+}
+
+.posts-list {
+	&__item {
+		&-image {
+			margin-bottom: 20px;
+
+			img {
+				max-width: 280px;
+			}
+		}
+
+		&-title {
+			font-family: Consolas;
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 24px;
+			color: #272522;
+		}
+	}
+}
+

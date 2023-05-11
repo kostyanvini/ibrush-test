@@ -1,0 +1,14 @@
+node_modules/
+*.log
+.idea/
+
+*.app
+*.exe
+*.war
+*.mp4
+*.tiff
+*.avi
+*.flv
+*.mov
+*.wmv
+

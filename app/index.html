@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body>
+
+<main class="main">
+	<div class="container">
+		<div class="title">
+			<h1>Путь JavaScript</h1>
+		</div>
+		<div class="banner">
+			<div class="banner__image" data-simplebar>
+				<img src="pic/banner.png" alt="">
+			</div>
+			<div class="banner__date banner-date">
+				<div class="banner-date__date">
+					12
+					<svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M5 2.5L0 5V0L5 2.5Z" fill="#1A1A1A"/>
+					</svg>
+				</div>
+				<div class="banner-date__month">
+
+					Апреля
+				</div>
+			</div>
+			<div class="banner__description">
+				Можно выделить три основных направления для прогресса JavaScript
+			</div>
+		</div>
+		<div class="server-js">
+			<h2 class="server-js__title">
+				Серверный JavaScript
+			</h2>
+			<div class="server-js__description">
+				<div class="server-js__description-wrap">
+					<div>
+						Разработчики и клиенты часто неправильно понимают, что такое система. Они видят графический интерфейс и думают, что он и есть система.
+						Они
+						определяют
+						систему в терминах графического интерфейса и считают, что должны сразу начать работу с графическим интерфейсом. Они не понимают
+						важнейшего
+						принципа:
+						ввод/вывод не важен.
+					</div>
+					<span>— Р. Мартин</span>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<section class="book">
+		<div class="book__wrap">
+			<div class="book__link">
+				Реклама на <a href="blabla.com" target="_blank">blabla.com</a>
+			</div>
+			<picture>
+				<source media="(min-width: 768px)" srcset="pic/book-banner.png">
+				<img src="pic/book-banner-min.png" alt="#">
+			</picture>
+		</div>
+	</section>
+	<section class="conclusion">
+		<div class="container">
+			<h2 class="conclusion__title">
+				Заключение
+			</h2>
+			<div class="conclusion__description">
+				Синхрония осознаёт сюжетный верлибр. Мифопорождающее текстовое устройство диссонирует лирический субъект. Абстрактное высказывание
+				пространственно
+				просветляет
+				деструктивный символ. Ямб, несмотря на то, что все эти характерологические черты отсылают не к единому образу нарратора, интегрирует
+				мифопоэтический
+				хронотоп.
+				Действительно, ударение приводит палимпсест. Контрапункт приводит ритм.
+			</div>
+		</div>
+	</section>
+	<section class="form">
+		<div class="container">
+			<form id="main-form" class="main-form">
+				<h2 class="form__title">
+					Оцените статью
+				</h2>
+				<div class="stars">
+					<input type="radio" id="star-5" name="star" value="5" class="stars__item">
+					<label for="star-5" class="stars__label"></label>
+					<input type="radio" id="star-4" name="star" value="4" class="stars__item">
+					<label for="star-4" class="stars__label"></label>
+					<input type="radio" id="star-3" name="star" value="3" class="stars__item">
+					<label for="star-3" class="stars__label"></label>
+					<input type="radio" id="star-2" name="star" value="2" class="stars__item">
+					<label for="star-2" class="stars__label"></label>
+					<input type="radio" id="star-1" name="star" value="1" class="stars__item">
+					<label for="star-1" class="stars__label"></label>
+				</div>
+				<div class="form__comment">
+					Добавить комментарий к книге
+				</div>
+				<div class="form__info">
+					<div class="input">
+						<input id="input-name" type="text" name="name" data-input-label>
+						<label for="input-name" class="input__label">Имя</label>
+					</div>
+					<div class="input">
+						<input id="input-email" type="email" name="email" data-input-label>
+						<label for="input-email" class="input__label">E-mail</label>
+					</div>
+					<select name="book">
+						<option value="0" selected>Выберите книгу</option>
+						<option value="JavaScript ниндзя">JavaScript ниндзя</option>
+						<option value="Pragmatic Guide to JavaScript">Pragmatic Guide to JavaScript</option>
+						<option value="Pro JavaScript Techniques">Pro JavaScript Techniques</option>
+						<option value="Выразительный JavaScript">Выразительный JavaScript</option>
+					</select>
+				</div>
+				<textarea class="form__review" name="review" placeholder="Ваш отзыв"></textarea>
+				<input type="submit" value="ОТПРАВИТЬ">
+			</form>
+		</div>
+	</section>
+	<div class="posts">
+		<div class="container">
+			<h2 class="posts__title">
+				Похожие посты
+			</h2>
+			<div class="swiper posts__list posts-list">
+				<div class="swiper-wrapper">
+					<a href="#" class="swiper-slide posts-list__item">
+						<div class="posts-list__item-image">
+							<img src="pic/post-1.png" alt="post-1">
+						</div>
+						<div class="posts-list__item-title">События жизненного цикла ReactJS</div>
+					</a>
+					<a href="#" class="swiper-slide posts-list__item">
+						<div class="posts-list__item-image">
+							<img src="pic/post-2.png" alt="post-2">
+						</div>
+						<div class="posts-list__item-title">CSS Grids. Полное руководство</div>
+					</a>
+					<a href="#" class="swiper-slide posts-list__item">
+						<div class="posts-list__item-image">
+							<img src="pic/post-3.png" alt="post-3">
+						</div>
+						<div class="posts-list__item-title">Асинхронность в JavaScript</div>
+					</a>
+				</div>
+				<div class="swiper-pagination posts-list-pagination"></div>
+			</div>
+		</div>
+	</div>
+</main>
+
+<script src="js/script.js"></script>
+</body>
+
+</html>
